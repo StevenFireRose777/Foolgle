@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="google-home.css" />
+    <title>Google</title>
+  </head>
+  <body>
+    <div>
+      <a href="./about.html" class="top" target="_blank">About</a>
+      <a href="./store.html" class="top" target="_blank">Store</a>
+
+      <button class="changer">
+        <!-- Added id to the image for easy JS selection -->
+        <img
+          id="switchable-img"
+          src="./images/sunny.jpg"
+          alt="image of sun"
+          class="sun"
+        />
+      </button>
+    </div>
+
+    <h1 class="Google">
+      <span style="color: blue">G</span>
+      <span style="color: red">o</span>
+      <span style="color: yellow">o</span>
+      <span style="color: blue">g</span>
+      <span style="color: green">l</span>
+      <span style="color: red">e</span>
+    </h1>
+
+    <div class="nav">
+      <input
+        class="search-query"
+        type="text"
+        style="width: 600px"
+        maxlength="100"
+        size="50"
+      />
+    </div>
+
+    <div class="buddies">
+      <button class="misc-buttons">Google Search</button>
+      <button class="misc-buttons">I'm Feeling Lucky</button>
+    </div>
+    <!-- Linked the JavaScript file at the end of the body -->
+    <script src="google-home.js"></script>
+  </body>
+</html>
