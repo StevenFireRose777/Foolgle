@@ -15,6 +15,7 @@
             object-fit: contain;
             flex: 1;
             width: 800px;
+            cursor: pointer;
 
         }
         
@@ -53,7 +54,7 @@
         <p class="header">&darr; Here is a link to the apple store. I don't know why you're here. So click the apple for a store. &darr;</p>
 
         <div class="apple-container">
-            <a href="https://www.apple.com/store" target="_blank">
+            <a href="#" target="_blank" id="randomLink">
                 <img src="./images/apple_158989157.jpg" alt="a red apple" class="apple">
             </a>
         </div>
@@ -63,6 +64,43 @@
 
 <script>
 
-    
+    const randomLink = document.getElementById('randomLink');
+    const image = randomLink.querySelector('img');
+    const stores = [
+  "https://www.apple.com",
+  "https://www.target.com",
+  "https://www.walmart.com",
+  "https://www.bestbuy.com",
+  "https://www.costco.com/",
+  "https://www.homedepot.com",
+  "https://www.lowes.com",
+  "https://www.nike.com",
+  "https://www.adidas.com",
+  "https://www.gamestop.com",
+  "https://www.sephora.com",
+  "https://www.ulta.com",
+  "https://www.macys.com",
+  "https://www.nordstrom.com",
+  "https://www.staples.com",
+  "https://www.petco.com",
+  "https://www.petsmart.com",
+  "https://www.toysrus.com",
+  "https://www.barnesandnoble.com",
+  "https://www.dickssportinggoods.com"
+];
+
+// function randomStore(){
+//     const randomIndex = Math.floor(Math.random() * stores.length);window.open(words[randomIndex], 'blank_');
+// }
+
+image.addEventListener('click', function(){
+    const randomIndex = Math.floor(Math.random() * stores.length);
+    const randomURL = stores[randomIndex];
+
+    // window.location.href = randomURL;
+    window.open(randomURL, '_blank');
+});
+
+
 </script>
 </html>
