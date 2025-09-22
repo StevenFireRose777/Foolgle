@@ -3,7 +3,7 @@ document.querySelector(".changer").addEventListener("click", function () { // ch
   if (img.src.includes("sunny.jpg")) {
     img.src = "./images/FullMoon2010.jpg"; // sun image becomes moon image
     img.alt = "image of the moon";
-    document.body.style.backgroundColor = "grey"; // becomes 'dark' mode
+    document.body.style.backgroundColor = "rgb(37,37,38)"; // becomes 'dark' mode
     
     setTopButtonsColor("dark"); // changes font color 
     savedMode = "dark";
@@ -43,7 +43,7 @@ function setTopButtonsColor(mode) {
 }
 
 if (savedMode === "dark") {
-  document.body.style.backgroundColor = "grey";
+  document.body.style.backgroundColor = "rgb(37,37,38)";
   setTopButtonsColor("dark");
 } else {
   document.body.style.backgroundColor = "peachpuff";

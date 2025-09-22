@@ -1,4 +1,6 @@
-
+body{
+    background-color: rgb(5, 4, 4);
+}
 
 .nav{
     text-align: center;
@@ -88,12 +90,11 @@ input#search-query{
     text-decoration: none;
     margin-right: 7px;
     font-family: Roboto, Oswald;
-    font-weight: 400;
+    font-weight: 450;
     font-size: 14px;;
     margin-top: 10px;
     margin-bottom: 20px;
     position: relative;
     top: 10px;
     left: 10px;
-    color: inherit;
 }
