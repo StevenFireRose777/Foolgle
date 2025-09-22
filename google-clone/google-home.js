@@ -9,7 +9,7 @@ document.querySelector(".changer").addEventListener("click", function () { // ch
     savedMode = "dark";
     localStorage.setItem("mode", savedMode); // saves state 
   } else {
-    img.src = "./images/sunny.jpg"; // if moon 
+    img.src = "./images/sunny.jpg"; // if moon is clicked
     img.alt = "image of sun";
     document.body.style.backgroundColor = "peachpuff";
     // update top button colors for light mode
@@ -27,7 +27,7 @@ if (!savedMode) {
   } else {
     savedMode = "light";
   }
-}
+} // checks user's peference whether they using dark or light mode
 
 // function that sets the font color for .top-buttons class
 function setTopButtonsColor(mode) {
