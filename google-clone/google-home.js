@@ -19,7 +19,7 @@ document.querySelector(".changer").addEventListener("click", function () { // ch
   }
 });
 
-let savedMode = localStorage.getItem("mode");
+let savedMode = localStorage.getItem("mode"); // gets current mode
 
 if (!savedMode) {
   if (window.matchMedia("(prefers-color-scheme: dark)").matches_) {
