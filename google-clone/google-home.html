@@ -4,12 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="google-home.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Foolgle</title>
   </head>
   <body>
     <div>
-      <a href="./about.html" class="top" target="_blank">About</a>
-      <a href="./store.html" class="top" target="_blank">Store</a>
+      <a href="./about.html" class="top-buttons" target="_blank">About</a>
+      <a href="./store.html" class="top-buttons" target="_blank">Store</a>
 
       <button class="changer">
         <!-- Added id to the image for easy JS selection -->
@@ -21,26 +29,25 @@
         />
       </button>
     </div>
-<div class="NOT-GOOGLE-CONTAINER">
-  <div class="logo-stack">
-    <!-- <h1 class="NOT">
+    <div class="NOT-GOOGLE-CONTAINER">
+      <div class="logo-stack">
+        <!-- <h1 class="NOT">
       <span style="color: red;">N</span>
       <span style="color: red;">O</span>
       <span style="color: red;">T</span>
     </h1> -->
 
-    <h1 class="Google">
-      <span style="color: blue">F</span>
-      <span style="color: red">o</span>
-      <span style="color: yellow">o</span>
-      <span style="color: green;">l</span>
-      <span style="color: blue">g</span>
-      <span style="color: green">l</span>
-      <span style="color: red">e</span>
-    </h1>
-  </div>
-</div>
-
+        <h1 class="Google">
+          <span style="color: blue">F</span>
+          <span style="color: red">o</span>
+          <span style="color: yellow">o</span>
+          <span style="color: green">l</span>
+          <span style="color: blue">g</span>
+          <span style="color: green">l</span>
+          <span style="color: red">e</span>
+        </h1>
+      </div>
+    </div>
 
     <div class="nav">
       <input
@@ -57,6 +64,13 @@
       <button class="search-button" type="submit">Google Search</button>
       <button class="lucky-button">I'm Feeling Lucky</button>
     </div>
+
+
+    <footer>
+      <div>
+        <p>Have a Great Day!</p>
+      </div>
+    </footer>
     <!-- Linked the JavaScript file at the end of the body -->
     <script src="google-home.js"></script>
   </body>

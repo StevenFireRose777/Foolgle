@@ -81,10 +81,19 @@ input#search-query{
     width: 90px;
     height: 60px;
     border-radius: 100px;
+    cursor: pointer;
 
 }
-.top{
+.top-buttons{
     text-decoration: none;
     color: black;
     margin-right: 7px;
+    font-family: Roboto, Oswald;
+    font-weight: 400;
+    font-size: 14px;;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    top: 10px;
+    left: 10px;
 }
