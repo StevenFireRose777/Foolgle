@@ -1,15 +1,15 @@
-document.querySelector(".changer").addEventListener("click", function () {
+document.querySelector(".changer").addEventListener("click", function () { // checks if user click on image
   const img = document.getElementById("switchable-img");
   if (img.src.includes("sunny.jpg")) {
-    img.src = "./images/FullMoon2010.jpg";
-    img.alt = "image of moon";
-    document.body.style.backgroundColor = "grey";
+    img.src = "./images/FullMoon2010.jpg"; // sun image becomes moon image
+    img.alt = "image of the moon";
+    document.body.style.backgroundColor = "grey"; // becomes 'dark' mode
     
-    setTopButtonsColor("dark");
+    setTopButtonsColor("dark"); // changes font color 
     savedMode = "dark";
-    localStorage.setItem("mode", savedMode);
+    localStorage.setItem("mode", savedMode); // saves state 
   } else {
-    img.src = "./images/sunny.jpg";
+    img.src = "./images/sunny.jpg"; // if moon 
     img.alt = "image of sun";
     document.body.style.backgroundColor = "peachpuff";
     // update top button colors for light mode
