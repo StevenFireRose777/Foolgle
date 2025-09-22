@@ -89,7 +89,6 @@ input#search-query{
 .top-buttons{
     text-decoration: none;
     margin-right: 7px;
-    font-family: Roboto, Oswald;
     font-weight: 450;
     font-size: 14px;;
     margin-top: 10px;
@@ -97,4 +96,16 @@ input#search-query{
     position: relative;
     top: 10px;
     left: 10px;
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    text-align: center;
+}
+
+*{
+    font-family: Roboto, Oswald;
 }
