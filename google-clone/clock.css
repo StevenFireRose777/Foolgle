@@ -1,0 +1,14 @@
+#clock{
+  font-size: 2em;
+  color: black;
+  padding: 20px;
+  width: fit-content;
+}
+
+span{
+  font-weight: bold;
+}
+
+*{
+    font-family: Roboto, Oswald;
+}
