@@ -31,7 +31,7 @@ if (!savedMode) {
 
 // function that sets the font color for .top-buttons class
 function setTopButtonsColor(mode) {
-  const buttons = document.querySelectorAll(".top-buttons");
+  const buttons = document.querySelectorAll(".top-buttons, footer");
   if (!buttons) return; // if there is no buttons
   buttons.forEach((btn) => {
     if (mode === "dark") {
