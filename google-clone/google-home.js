@@ -1,6 +1,10 @@
+
+
+
+
 document.querySelector(".changer").addEventListener("click", function () { // checks if user click on image
   const img = document.getElementById("switchable-img");
-  if (img.src.includes("sunny.jpg")) {
+  if (img.src.endsWith("sunny.jpg")) {
     img.src = "./images/FullMoon2010.jpg"; // sun image becomes moon image
     img.alt = "image of the moon";
     document.body.style.backgroundColor = "rgb(37,37,38)"; // becomes 'dark' mode
@@ -49,6 +53,16 @@ if (savedMode === "dark") {
   document.body.style.backgroundColor = "peachpuff";
   setTopButtonsColor("light");
 }
+
+const img = document.getElementById("switchable-img");
+if(savedMode === "dark"){
+  img.src = "./images/FullMoon2010.jpg";
+  img.alt = "imgae of the moon";
+}else{
+  img.src = "./images/sunny.jpg";
+  img.alt = "image of sun";
+}
+
 
 // Gets ID attribute from HTML doc
 let textInput = document.getElementById("search-query");
