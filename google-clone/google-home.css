@@ -98,12 +98,25 @@ input#search-query{
     left: 10px;
 }
 footer{
-    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    /* background-color: rgb(240, 201, 166); */
+    background-color: rgb(240, 201, 166);
     text-align: center;
+    vertical-align: center;
+}
+
+.message{
+    margin-left: 150px;
+}
+
+.suprise-button-container{
+    margin-right: 150px;
 }
 
 *{

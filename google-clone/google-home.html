@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="google-home.css" />
+    <link rel="stylesheet" href="google-home.css">
+
+    <link rel="stylesheet" href="clock.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,7 +16,7 @@
 
     <title>Foolgle</title>
   </head>
-  <body>
+  <body onload="Time()">
     <div>
       <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header" class="top-buttons" target="_blank">About</a>
       <a href="./store.html" class="top-buttons" target="_blank">Store</a>
@@ -67,9 +69,15 @@
 
 
     <footer>
-      <p>Have a Great Day!</p>
+      <p class="message">Have a Great Day!</p>
+      <div id="clock">
+        <span id="span">e</span>
+      </div>
+      <div class="suprise-button-container">
+        <button class="surprise">Press me for a surprise!</button>
+      </div>
     </footer>
     <!-- Linked the JavaScript file at the end of the body -->
-    <script src="google-home.js"></script>
+    <script src="google-home.js" src="clock.js"></script>
   </body>
 </html>
