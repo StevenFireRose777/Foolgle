@@ -47,18 +47,19 @@
     top: 50%;
     cursor: pointer;
 }
-input.search-query{
+input#search-query{
     background-color: white;
     border-radius: 100px;
     height: 30px;
     padding-left: 10px;
 }
-.search-query::placeholder{
+#search-query::placeholder{
     font-size: 12px;
     font-weight: bold;
 }
 
-.misc-buttons{
+
+.search-button, .lucky-button{
     margin-right: 10px;
     background-color: grey;
     padding-left: 12px;
