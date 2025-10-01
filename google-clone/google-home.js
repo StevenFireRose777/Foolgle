@@ -1,7 +1,5 @@
 
 
-
-
 document.querySelector(".changer").addEventListener("click", function () { // checks if user click on image
   const img = document.getElementById("switchable-img");
   if (img.src.endsWith("sunny.jpg")) {
@@ -10,6 +8,7 @@ document.querySelector(".changer").addEventListener("click", function () { // ch
     document.body.style.backgroundColor = "rgb(37,37,38)"; // becomes 'dark' mode
     
     setTopButtonsColor("dark"); // changes font color 
+    setFooterBackground("dark");
     savedMode = "dark";
     localStorage.setItem("mode", savedMode); // saves state 
   } else {
@@ -18,6 +17,7 @@ document.querySelector(".changer").addEventListener("click", function () { // ch
     document.body.style.backgroundColor = "peachpuff";
     // update top button colors for light mode
     setTopButtonsColor("light");
+    setFooterBackground("light");
     savedMode = "light";
     localStorage.setItem("mode", savedMode);
   }
@@ -26,7 +26,7 @@ document.querySelector(".changer").addEventListener("click", function () { // ch
 let savedMode = localStorage.getItem("mode"); // gets current mode
 
 if (!savedMode) {
-  if (window.matchMedia("(prefers-color-scheme: dark)").matches_) {
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
     savedMode = "dark";
   } else {
     savedMode = "light";
@@ -35,7 +35,7 @@ if (!savedMode) {
 
 // function that sets the font color for .top-buttons class
 function setTopButtonsColor(mode) {
-  const buttons = document.querySelectorAll(".top-buttons, footer");
+  const buttons = document.querySelectorAll(".top-buttons, footer, #txt");
   if (!buttons) return; // if there is no buttons
   buttons.forEach((btn) => {
     if (mode === "dark") {
@@ -46,18 +46,27 @@ function setTopButtonsColor(mode) {
   });
 }
 
+function setFooterBackground(mode){
+  const footer = document.querySelector("footer");
+  if(footer){
+    footer.style.backgroundColor = mode === 'dark' ? "rgb(25, 25, 25)" : "rgb(240, 201, 166)";
+  }
+}
+
 if (savedMode === "dark") {
   document.body.style.backgroundColor = "rgb(37,37,38)";
   setTopButtonsColor("dark");
+  setFooterBackground("dark");
 } else {
   document.body.style.backgroundColor = "peachpuff";
   setTopButtonsColor("light");
+  setFooterBackground("light");
 }
 
 const img = document.getElementById("switchable-img");
 if(savedMode === "dark"){
   img.src = "./images/FullMoon2010.jpg";
-  img.alt = "imgae of the moon";
+  img.alt = "image of the moon";
 }else{
   img.src = "./images/sunny.jpg";
   img.alt = "image of sun";
