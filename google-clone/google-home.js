@@ -7,8 +7,9 @@ document.querySelector(".changer").addEventListener("click", function () { // ch
     img.alt = "image of the moon";
     document.body.style.backgroundColor = "rgb(37,37,38)"; // becomes 'dark' mode
     
-    setTopButtonsColor("dark"); // changes font color 
-    setFooterBackground("dark");
+  setTopButtonsColor("dark"); // changes font color 
+  setFooterBackground("dark");
+  setSurpriseButtonBackgroundColor("dark");
     savedMode = "dark";
     localStorage.setItem("mode", savedMode); // saves state 
   } else {
@@ -16,8 +17,9 @@ document.querySelector(".changer").addEventListener("click", function () { // ch
     img.alt = "image of sun";
     document.body.style.backgroundColor = "peachpuff";
     // update top button colors for light mode
-    setTopButtonsColor("light");
-    setFooterBackground("light");
+  setTopButtonsColor("light");
+  setFooterBackground("light");
+  setSurpriseButtonBackgroundColor("light");
     savedMode = "light";
     localStorage.setItem("mode", savedMode);
   }
@@ -46,6 +48,14 @@ function setTopButtonsColor(mode) {
   });
 }
 
+function setSurpriseButtonBackgroundColor(mode) {
+  const surpriseButton = document.querySelector(".surprise-button");
+  if (surpriseButton) {
+    surpriseButton.style.backgroundColor = mode === "dark" ? "#000" : "grey";
+  }
+}
+
+
 function setFooterBackground(mode){
   const footer = document.querySelector("footer");
   if(footer){
@@ -57,10 +67,12 @@ if (savedMode === "dark") {
   document.body.style.backgroundColor = "rgb(37,37,38)";
   setTopButtonsColor("dark");
   setFooterBackground("dark");
+  setSurpriseButtonBackgroundColor("dark");
 } else {
   document.body.style.backgroundColor = "peachpuff";
   setTopButtonsColor("light");
   setFooterBackground("light");
+  setSurpriseButtonBackgroundColor("light");
 }
 
 const img = document.getElementById("switchable-img");
