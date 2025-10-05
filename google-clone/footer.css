@@ -20,6 +20,67 @@ footer{
     margin-right: 150px;
 }
 
+.surprise-button{
+    border: none; 
+    outline: none; /*The line around the border*/
+    color: #fff; 
+    z-index: 0;
+    background-color: grey;
+    cursor: pointer;
+    padding: 12px 11px;
+    border-radius: 10px;
+    position: relative; /*Stays relative always but probably used it here as pos: absolute comes into play.*/
+}
+
+.surprise-button:before{
+    content: ' '; /* Makes sure that button is cleared*/
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000, #000, #eee6e6); 
+    /*Makes up color animation, think of it combining colors together. With each kinda having their own line*/
+    position: absolute; /*Makes sure the background sticks onto the button*/
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px); /*Makes colors blurry*/
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite; /*The animation itself*/
+    opacity: 0;
+    transition: opacity .3s ease-in-out; /*Creates the curve style animation!*/
+    border-radius: 10px;
+}
+.surprise-button:active{
+    color: #000;
+}
+.surprise-button:active::after{
+    background: transparent; /*Makes sure the grey color turns to the rainbow animated background*/
+}
+.surprise-button:hover::before{
+    opacity: 1;
+}
+.surprise-button::after{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+@keyframes glowing{
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100%{ background-position: 0 0; }   
+}
+/*- Right here we essentially define the word glowing
+- @keyframes basically helps us create these animations. Need to learn this one more.*/
+
+/*I borrowed this css code for a rainbow animated button for learning purposes.*/
+/*Source: https://dev.to/webdeasy/top-20-css-buttons-animations-f41 */
+
+
 *{
     font-family: Roboto, Oswald;
 }
