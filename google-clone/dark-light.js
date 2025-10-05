@@ -7,7 +7,7 @@ document.querySelector(".changer").addEventListener("click", function () { // ch
     img.alt = "image of the moon";
     document.body.style.backgroundColor = "rgb(37,37,38)"; // becomes 'dark' mode
     
-  setTopButtonsColor("dark"); // changes font color 
+  setTextColor("dark"); // changes font color 
   setFooterBackground("dark");
   setSurpriseButtonBackgroundColor("dark");
     savedMode = "dark";
@@ -17,7 +17,7 @@ document.querySelector(".changer").addEventListener("click", function () { // ch
     img.alt = "image of sun";
     document.body.style.backgroundColor = "peachpuff";
     // update top button colors for light mode
-  setTopButtonsColor("light");
+  setTextColor("light");
   setFooterBackground("light");
   setSurpriseButtonBackgroundColor("light");
     savedMode = "light";
@@ -36,14 +36,14 @@ if (!savedMode) {
 } // checks user's peference whether they using dark or light mode
 
 // function that sets the font color for .top-buttons class
-function setTopButtonsColor(mode) {
-  const buttons = document.querySelectorAll(".top-buttons, footer, #txt");
-  if (!buttons) return; // if there is no buttons
-  buttons.forEach((btn) => {
+function setTextColor(mode) {
+  const elements = document.querySelectorAll(".top-buttons, footer, #txt, .surprise-button");
+  if (!elements) return; // if there is no buttons
+  elements.forEach((element) => {
     if (mode === "dark") {
-      btn.style.color = "white"; // 'light' mode font color
+      element.style.color = "white"; // 'light' mode font color
     } else {
-      btn.style.color = "black"; // 'dark' mode font color
+      element.style.color = "black"; // 'dark' mode font color
     }
   });
 }
@@ -51,7 +51,7 @@ function setTopButtonsColor(mode) {
 function setSurpriseButtonBackgroundColor(mode) {
   const surpriseButton = document.querySelector(".surprise-button");
   if (surpriseButton) {
-    surpriseButton.style.backgroundColor = mode === "dark" ? "#000" : "grey";
+    surpriseButton.style.backgroundColor = mode === "dark" ? "#000" : "#cf9f45";
   }
 }
 
@@ -65,12 +65,12 @@ function setFooterBackground(mode){
 
 if (savedMode === "dark") {
   document.body.style.backgroundColor = "rgb(37,37,38)";
-  setTopButtonsColor("dark");
+  setTextColor("dark");
   setFooterBackground("dark");
   setSurpriseButtonBackgroundColor("dark");
 } else {
   document.body.style.backgroundColor = "peachpuff";
-  setTopButtonsColor("light");
+  setTextColor("light");
   setFooterBackground("light");
   setSurpriseButtonBackgroundColor("light");
 }
