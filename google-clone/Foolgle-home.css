@@ -99,6 +99,12 @@ input#search-query{
     left: 10px;
 }
 
+
+#lizard-dance{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
 *{
     font-family: Roboto, Oswald;
 }
