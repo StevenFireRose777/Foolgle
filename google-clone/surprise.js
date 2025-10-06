@@ -1,11 +1,12 @@
 let timerID;
 let lock = false;
-
+const GIFS = ['morshu.gif', 'lizard.gif']
 
 function makeInvisable() {
   document.getElementById("lizard-dance").style.opacity = 0;
   lock = false;
 }
+
 
 document
   .querySelector(".surprise-button")
