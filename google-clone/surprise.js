@@ -1,19 +1,22 @@
+let timerID;
+let lock = false;
 
 
-function makeInvisable(){
+function makeInvisable() {
   document.getElementById("lizard-dance").style.opacity = 0;
+  lock = false;
 }
 
-let timerID;
-
-document.querySelector(".surprise-button")
+document
+  .querySelector(".surprise-button")
   .addEventListener("click", function () {
-
-    if(timerID){
-      clearTimeout(timerID);
+    if (!lock) {
+      if (timerID) {
+        clearTimeout(timerID);
+      }
+      // console.log("clicked!");
+      document.getElementById("lizard-dance").style.opacity = 1;
+      timerID = setTimeout(makeInvisable, 10000); // 10 seconds
+      lock = true;
     }
-    // console.log("clicked!");
-    document.getElementById("lizard-dance").style.opacity = 1;
-    timerID = setTimeout(makeInvisable, 10000); // 10 seconds
-
   });
