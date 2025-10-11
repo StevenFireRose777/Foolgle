@@ -42,7 +42,6 @@ body{
 
 .buddies{
     text-align: center;
-    
 }
 .button{
     position: absolute;
@@ -118,8 +117,8 @@ input#search-query{
     margin-top: 10px;
     margin-bottom: 20px;
     position: relative;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
 }
 
 
