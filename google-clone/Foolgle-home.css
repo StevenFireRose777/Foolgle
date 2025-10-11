@@ -6,7 +6,6 @@ body{
 .nav{
     text-align: center;
     margin-bottom: 30px;
-    
 }
 
 .NOT-GOOGLE-CONTAINER {
@@ -54,11 +53,35 @@ input#search-query{
     background-color: white;
     border-radius: 100px;
     height: 30px;
-    padding-left: 10px;
+    /* padding-left: 30px; */
 }
+
+.search-bar{
+    position: relative;
+    display: inline-block;
+}
+.search-bar input{
+    width: 100%;
+    padding: 10px 15px 10px 45px;
+    font-size: 16px;
+}
+
+.search-logo{
+    position: absolute;
+    left: 15px;
+    top: 50%; /*Moves the logo down around the half-way point*/
+    transform: translateY(-50%); /* Basically moves the element up 50% of its current height*/
+    width: 20px;
+    height: 20px;
+    color: grey;
+    pointer-events: none;
+}
+
 #search-query::placeholder{
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
+    color: black;
+    text-align: center;
 }
 
 
