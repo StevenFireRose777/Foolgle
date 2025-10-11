@@ -1,11 +1,11 @@
 let timerID;
 let lock = false;
-const GIFS = ['GIFS/morshu.gif', 'GIFS/lizard.gif'];
+const GIFS = ['GIFS/morshu.gif', 'GIFS/lizard.gif', 'GIFS/CS-MAJOR.gif'];
 GIFS.forEach(src => {const img = new Image(); img.src = src; });
 // Preloads image as soon this script is ran!
 
 function getRandomGIF(){
-  return GIFS[Math.floor(Math.random() * 2)];
+  return GIFS[Math.floor(Math.random() * 3)];
 }
 
 
