@@ -99,6 +99,8 @@ input#search-query{
     border: none;
     background-color: rgb(62, 49, 49);
     border-radius: 100px;
+    margin-right: 10px;
+    margin-top: 7px;
 }
 
 
