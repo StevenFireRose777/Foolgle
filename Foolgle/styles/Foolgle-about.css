@@ -6,7 +6,8 @@
   margin: 0;
   padding: 0;
   letter-spacing: 1px;
-  margin-left: 20px;
+  margin-left: 15px;
+  margin-top: 12px;
 }
 
 .changer {
@@ -21,6 +22,27 @@
   height: 60px;
   border-radius: 100px;
   cursor: pointer;
+}
+
+
+.side-container{
+  display:flex;
+
+}
+
+#burger-bar{
+  height: 33px;
+  cursor: pointer;
+  padding: 10px;
+  position: static;
+  border-radius: 7px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+#burger-bar:hover{
+  border-color: blue;
 }
 
 header{
