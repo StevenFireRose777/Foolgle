@@ -11,6 +11,8 @@ document.querySelector(".changer").addEventListener("click", function () { // ch
   setFooterBackground("dark");
   setSurpriseButtonBackgroundColor("dark");
   setSVGColor("dark");
+  setSideBarColor("dark");
+  setMenuCloseColor("dark");
     savedMode = "dark";
     localStorage.setItem("mode", savedMode); // saves state 
   } else {
@@ -22,6 +24,8 @@ document.querySelector(".changer").addEventListener("click", function () { // ch
   setFooterBackground("light");
   setSurpriseButtonBackgroundColor("light");
   setSVGColor("light");
+  setSideBarColor("light");
+  setMenuCloseColor("light");
     savedMode = "light";
     localStorage.setItem("mode", savedMode);
   }
@@ -72,18 +76,36 @@ function setSVGColor(mode){
   }
 }
 
+function setSideBarColor(mode){
+  const sidebar = document.querySelector('.nav');
+  if(sidebar){
+    sidebar.style.backgroundColor = mode === 'dark' ? "rgb(25, 25, 25)" : "rgb(240, 201, 166)";
+  }
+}
+
+function setMenuCloseColor(mode) {
+  const spans = document.querySelectorAll('.menu-close span'); // SELECTS ALL SPANS UNDER menu-close class
+  spans.forEach(span => {
+    span.style.backgroundColor = mode === 'dark' ? "white" : "black";
+  });
+}
+
 if (savedMode === "dark") {
   document.body.style.backgroundColor = "rgb(37,37,38)";
   setTextColor("dark");
   setFooterBackground("dark");
   setSurpriseButtonBackgroundColor("dark");
   setSVGColor("dark");
+  setSideBarColor("dark");
+  setMenuCloseColor("dark");
 } else {
   document.body.style.backgroundColor = "peachpuff";
   setTextColor("light");
   setFooterBackground("light");
   setSurpriseButtonBackgroundColor("light");
   setSVGColor("light");
+  setSideBarColor("light");
+  setMenuCloseColor("light");
 }
 
 const img = document.getElementById("switchable-img");
