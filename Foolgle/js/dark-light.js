@@ -10,6 +10,7 @@ document.querySelector(".changer").addEventListener("click", function () { // ch
   setTextColor("dark"); // changes font color 
   setFooterBackground("dark");
   setSurpriseButtonBackgroundColor("dark");
+  setSVGColor("dark");
     savedMode = "dark";
     localStorage.setItem("mode", savedMode); // saves state 
   } else {
@@ -20,6 +21,7 @@ document.querySelector(".changer").addEventListener("click", function () { // ch
   setTextColor("light");
   setFooterBackground("light");
   setSurpriseButtonBackgroundColor("light");
+  setSVGColor("light");
     savedMode = "light";
     localStorage.setItem("mode", savedMode);
   }
@@ -63,16 +65,25 @@ function setFooterBackground(mode){
   }
 }
 
+function setSVGColor(mode){
+  const SVG = document.getElementById("burger-bar");
+  if(SVG){
+    SVG.src = mode === 'dark' ? "logos/burger-dark.svg" : "logos/burger.svg";
+  }
+}
+
 if (savedMode === "dark") {
   document.body.style.backgroundColor = "rgb(37,37,38)";
   setTextColor("dark");
   setFooterBackground("dark");
   setSurpriseButtonBackgroundColor("dark");
+  setSVGColor("dark");
 } else {
   document.body.style.backgroundColor = "peachpuff";
   setTextColor("light");
   setFooterBackground("light");
   setSurpriseButtonBackgroundColor("light");
+  setSVGColor("light");
 }
 
 const img = document.getElementById("switchable-img");
@@ -83,4 +94,7 @@ if(savedMode === "dark"){
   img.src = "./images/sunny.jpg";
   img.alt = "image of sun";
 }
+
+
+
 
