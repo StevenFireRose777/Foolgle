@@ -42,7 +42,7 @@
 }
 
 #burger-bar:hover{
-  border-color: blue;
+  border-color: rgb(76, 76, 222);
 }
 
 
@@ -54,10 +54,12 @@
   height: 100vh;
   background-color: white;
   border-right: 1px solid black;
-  transition: left 200ms ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
+  transition: left 200ms ease; /*Animation for side bar to go left --> right*/
 }
 .nav.active{
   left: 0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.404);
 }
 .nav ul{
   position: absolute;
